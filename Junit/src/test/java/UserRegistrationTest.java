@@ -24,4 +24,10 @@ public class UserRegistrationTest {
         Assert.assertTrue("abc@gmail.com", emailID);
     }
 
+    @Test
+    public void givenMobileNumber_ShouldReturnTrue() {
+        UserRegistration user = new UserRegistration();
+        boolean mobileNumber = user.validateMobileNumber("919876543210");
+        Assert.assertTrue("919876543210", mobileNumber);
+    }
 }
